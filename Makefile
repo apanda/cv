@@ -16,9 +16,11 @@ $P.dvi	: $(wildcard *.tex *.bib *.sty *.cls)
 $P.pdf	: $(wildcard *.tex *.bib *.sty *.cls)
 	pdflatex  $P < /dev/null || $(RM) $@
 	bibtex $P < /dev/null || $(RM) $@
+	bibtex conference < /dev/null || $(RM) $@
+	bibtex workshop < /dev/null || $(RM) $@
+	bibtex demos < /dev/null || $(RM) $@
 	pdflatex  $P < /dev/null || $(RM) $@
 	pdflatex  $P < /dev/null || $(RM) $@
-	chmod +x $P.pdf
 
 paper-diff.pdf : $P.pdf # hack to pull in all dependencies of P.pdf
 	latexdiff --flatten paper.tex paper-in.tex > paper-diff.tex

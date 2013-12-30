@@ -43,12 +43,12 @@
 % to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
 %\makeatletter
 %\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%\makeatother
-%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+\makeatother
+\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
 
 % bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
+\usepackage{multibib}
+\newcites{conference,workshop,demos}{{Conferences},{Workshops},{Demos}}
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
@@ -56,14 +56,13 @@
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
-\section{Interests}
-I am interested in the architecture and implementation of large distributed systems (including large computation clusters and
-computer networks). 
+\section{Research Interests}
+Distributed Systems, Networking, Formal Verification, Network Resilience, Software-Defined Networking.
 
 \section{Education}
-\cventry{2011--present}{PhD student}{University of California}{Berkeley, CA}{}{Adviser: Scott Shenker}  % arguments 3 to 6 can be left empty
+\cventry{2011--present}{PhD student}{University of California}{Berkeley, CA}{}{Advisor: Scott Shenker}  % arguments 3 to 6 can be left empty
 \cventry{2004--2008}{Sc.B. Math-Computer Science}{Brown University}{Providence, RI}{}{Honors in Math-Computer Science\\
-Adviser: Meinolf Sellmann}
+Advisor: Meinolf Sellmann}
 
 \section{Awards}
 \cvlistitem{Best Paper, EuroSys 2012}
@@ -131,32 +130,27 @@ time accuracy and performance.
 \item Ported Midori from x86-64 to NVidia's Tegra2 multicore ARM processor.
 \end{itemize}}%
 \cventry{06/2007--08/2007}{Software Engineering Intern}{Electronic Arts}{Redwood City, CA}{}{\begin{itemize}
-\item Developed memory management tools for PS3.
-\item Worked on Godfather 2 video game.
+\item Developed memory management tools for the PlayStation 3.
 \end{itemize}}
 \cventry{06/2006--08/2006}{Software Engineering Intern}{Bloomberg LP}{New York, NY}{}{\begin{itemize}
-\item Developed network debugging tools for discovering the cause for latency spikes in data transfer from stock exchanges.
+\item Developed network debugging tools for discovering the cause for latency spikes in data transfer from financial markets.
 \end{itemize}}
-\eat{
-}
-% Publications from a BibTeX file without multibib
-%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-\nocite{*}
-\bibliographystyle{abbrv}
-\bibliography{citations}                        % 'publications' is the name of a BibTeX file
+
+\section{Publications}
+\nociteconference{*}
+\bibliographystyleconference{plainyr-rev}
+\bibliographyconference{conference}                   % 'publications' is the name of a BibTeX file
+
+\nociteworkshop{*}
+\bibliographystyleworkshop{plainyr-rev}
+\bibliographyworkshop{workshop}                   % 'publications' is the name of a BibTeX file
+
+
+\nocitedemos{*}
+\bibliographystyledemos{plainyr-rev}
+\bibliographydemos{demos}                   % 'publications' is the name of a BibTeX file
 \section{References}
 Available on request
-% Publications from a BibTeX file using the multibib package
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
-
-%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
 \end{document}
 
 
