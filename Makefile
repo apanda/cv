@@ -19,6 +19,7 @@ $P.pdf	: $(wildcard *.tex *.bib *.sty *.cls)
 	bibtex conference < /dev/null || $(RM) $@
 	bibtex workshop < /dev/null || $(RM) $@
 	bibtex demos < /dev/null || $(RM) $@
+	bibtex trs < /dev/null || $(RM) $@
 	pdflatex  $P < /dev/null || $(RM) $@
 	pdflatex  $P < /dev/null || $(RM) $@
 
