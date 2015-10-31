@@ -24,7 +24,7 @@
 % personal data
 \name{Aurojit}{Panda}
 \title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
-\address{1176 Universty Ave, Apt 107}{Berkeley, CA 94702}   % optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\address{1176 University Ave, Apt 107}{Berkeley, CA 94702}   % optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
 \phone[mobile]{+1~(401)~323~1524}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 %\phone[fixed]{+2~(345)~678~901}
 %\phone[fax]{+3~(456)~789~012}
@@ -64,10 +64,21 @@ Distributed systems, networking
 Advisor: Meinolf Sellmann}
 
 \section{Awards}
+\cvlistitem{Best Student Paper, SIGCOMM 2015}
 \cvlistitem{Best Paper, EuroSys 2013}
 \cvlistitem{Qualcomm Innovation Fellowship 2012}
 
 \section{Research}
+\cvlistitem {\textbf{ZCSI}: Network operators are increasingly moving from hardware middleboxes to software network
+functions. The move to software reduces vendor lock-in, makes it easier to deploy new features, and provides benefits
+for consolidation. The current model for deploying these network functions envisions using virtual machines (or
+containers) connected using virtual switches. While this model has served workloads in the cloud well, NFs need to
+process millions of packets per-second while adding no more than a few microseconds of delay in order to meet SLAs. VMs
+and containers add high-overheads for this. ZCSI is a new NF framework which leverages software isolation to provide the
+same guarantees as VMs without incurring this overhead. Furthermore, ZCSI allows NFs to be written in high-level managed
+languages, enhancing developer productivity and allowing faster development. ZCSI achieves this while improving
+performance when compared to today's deployments.}
+
 \cvlistitem {\textbf{Model Checking for Networks}: Networks include middleboxes and other stateful elements whose
     behavior is dictated by previously encountered packets. We developed a tool to verify isolation invariants (can
     packets with certain characteristics be delivered to certain end hosts, and can data originating at a particular
