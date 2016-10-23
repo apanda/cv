@@ -20,6 +20,7 @@ $P.pdf	: $(wildcard *.tex *.bib *.sty *.cls)
 	bibtex workshop < /dev/null || $(RM) $@
 	bibtex demos < /dev/null || $(RM) $@
 	bibtex trs < /dev/null || $(RM) $@
+	bibtex journals < /dev/null || $(RM) $@
 	pdflatex  $P < /dev/null || $(RM) $@
 	pdflatex  $P < /dev/null || $(RM) $@
 
@@ -54,6 +55,7 @@ spellcheck:
 	  echo $$i; \
 	  aspell -c --home-dir=. $$i; \
 	done
+all: $P.pdf
 
 print:	$P.ps
 

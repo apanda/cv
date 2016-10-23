@@ -32,8 +32,8 @@
 \renewcommand*\httplink[2][]{{\urlstyle{sf}\expandafter\href#2}}
 \homepage{{https://www.cs.berkeley.edu/~apanda/}{www.cs.berkeley.edu/{\textasciitilde}apanda}}                         % optional, remove / comment the line if not wanted
 %\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
-%\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
-%\social[github]{jdoe}                              % optional, remove / comment the line if not wanted
+%\social[twitter]{apanda}                             % optional, remove / comment the line if not wanted
+%\social[github]{apanda}                              % optional, remove / comment the line if not wanted
 %\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
 %\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 %\quote{Some quote}                                 % optional, remove / comment the line if not wanted
@@ -47,7 +47,7 @@
 
 % bibliography with mutiple entries
 \usepackage{multibib}
-\newcites{conference,workshop,demos,trs}{{Conferences},{Workshops},{Demos},{Technical Reports}}
+\newcites{conference,journals,workshop,demos,trs}{{Conferences},{Journals},{Workshops},{Demos},{Technical Reports}}
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
@@ -56,10 +56,10 @@
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 \section{Research Interests}
-Distributed systems, networking
+Computer Systems, Distributed Systems, Networking
 
 \section{Education}
-\cventry{2011--present}{PhD student}{University of California}{Berkeley, CA}{}{Advisor: Scott Shenker}  % arguments 3 to 6 can be left empty
+\cventry{2011--present}{PhD candidate}{University of California}{Berkeley, CA}{}{Advisor: Scott Shenker}  % arguments 3 to 6 can be left empty
 \cventry{2004--2008}{Sc.B. Math--Computer Science}{Brown University}{Providence, RI}{}{Honors in Math--Computer Science\\
 Advisor: Meinolf Sellmann}
 
@@ -68,61 +68,100 @@ Advisor: Meinolf Sellmann}
 \cvlistitem{Best Paper, EuroSys 2013}
 \cvlistitem{Qualcomm Innovation Fellowship 2012}
 
-\section{Research}
-\cvlistitem {\textbf{ZCSI}: Network operators are increasingly moving from hardware middleboxes to software network
-functions. The move to software reduces vendor lock-in, makes it easier to deploy new features, and provides benefits
-for consolidation. The current model for deploying these network functions envisions using virtual machines (or
-containers) connected using virtual switches. While this model has served workloads in the cloud well, NFs need to
-process millions of packets per-second while adding no more than a few microseconds of delay in order to meet SLAs. VMs
-and containers add high-overheads for this. ZCSI is a new NF framework which leverages software isolation to provide the
-same guarantees as VMs without incurring this overhead. Furthermore, ZCSI allows NFs to be written in high-level managed
-languages, enhancing developer productivity and allowing faster development. ZCSI achieves this while improving
-performance when compared to today's deployments.}
+\section{Publications}
+\nociteconference{*}
+\bibliographystyleconference{plainyr-rev}
+\bibliographyconference{conference}                   % 'publications' is the name of a BibTeX file
 
-\cvlistitem {\textbf{Model Checking for Networks}: Networks include middleboxes and other stateful elements whose
-    behavior is dictated by previously encountered packets. We developed a tool to verify isolation invariants (can
-    packets with certain characteristics be delivered to certain end hosts, and can data originating at a particular
-    host end up somewhere). We also developed theoretical foundations showing that if one uses middlebox models with
-    certain simple limitations and runs checks in loop free network then verification is guaranteed to terminate.}
+\nocitejournals{*}
+\bibliographystylejournals{plainyr-rev}
+\bibliographyjournals{journals}                   % 'publications' is the name of a BibTeX file
 
-\cvlistitem {\textbf{Data-Aware Cluster Scheduling for Sampling Jobs}: An increasing portion of cluster computing jobs
-use sampled data, either to reduce computational time using approximate querying or when computing stochastic machine
-learning functions. In this work, we looked at how cluster schedulers could use sampling information to significantly
-improve the performance of cluster computing jobs.}
-
-\cvlistitem {\textbf{Network Consistency Models}: Networks increasingly enforce policy, which ultimately requires that
-several of the middleboxes/routers in a network have a consistent view of the network. However, the CAP theorem says
-that this must necessarily come at the cost of giving up availability in the presence of partitions. In this work we
-analyzed the effects of this trade-off.}
-
-\cvlistitem {\textbf{Data Driven Connectivity}: Minimizing the network disruption due to link or router/switch failures
-    continues to be an important concern.
-    We developed an online algorithm that provides perfect forwarding
-resilience \textit{i.e.,} guarantees that in an uncongested, connected network no set of link failures results in a packet drop. We
-have also had subsequent work on theory that shows the limits of resilience that can be achieved using just static
-routing tables with no updates.}
-
-\cvlistitem {\textbf{SDNv2}: The rise of NFV and other similar technologies has meant that general purpose computers are
-increasingly available at the network edge. We designed a new internet architecture that allowed ISPs to leverage these
-computers to provide increased flexibility to the customers.}
-
-\cvlistitem {\textbf{SMIRC}: We asked the question, can secure multiparty computation (SMPC) can be used to compute BGP
-routing information. The use of SMPC would allows BGP computation to be centralized without requiring ASes to reveal
-private policy information, speeding up BGP convergence without requiring ASes to change their trust model.}
-
-\cvlistitem {\textbf{Recursive SDN}: We looked at how one could scale SDN controllers so they can be used to control ISP
-    networks which tend to both be numerically larger, and geographically wide-spread. Our solution is to use hierarchy
-    and recursive algorithms.}
+\nociteworkshop{*}
+\bibliographystyleworkshop{plainyr-rev}
+\bibliographyworkshop{workshop}                   % 'publications' is the name of a BibTeX file
 
 
-    \cvlistitem {\textbf{BlinkDB}: We built a fast, approximate database on top of Spark. BlinkDB used sampling and
-    innovative statistical techniques to provide approximate answers and quality measurements for arbitrary SQL query.
-BlinkDB has since been deployed at companies like Facebook, is commercially supported by other companies.}
+\nocitedemos{*}
+\bibliographystyledemos{plainyr-rev}
+\bibliographydemos{demos}                   % 'publications' is the name of a BibTeX file
 
-\cvlistitem {\textbf{Symmetry Breaking for Constraint Programming}: We looked at methods by which one could speed up
-solving constraint satisfaction problems. These problems are widely used (for instance to schedule UPS delivery trucks
-and NFL games) and are susceptible to an exponential growth in time, particularly when many equivalent (symmetric)
-solutions exist. }
+\nocitetrs{*}
+\bibliographystyletrs{plainyr-rev}
+\bibliographytrs{tr}                   % 'publications' is the name of a BibTeX file
+%\section{Research}
+%%\cvlistitem{\textbf{NetBricks}}: 
+%%\cvlistitem {\textbf{ZCSI}: Network operators are increasingly moving from hardware middleboxes to software network
+%%functions. The move to software reduces vendor lock-in, makes it easier to deploy new features, and provides benefits
+%%for consolidation. The current model for deploying these network functions envisions using virtual machines (or
+%%containers) connected using virtual switches. While this model has served workloads in the cloud well, NFs need to
+%%process millions of packets per-second while adding no more than a few microseconds of delay in order to meet SLAs. VMs
+%%and containers add high-overheads for this. ZCSI is a new NF framework which leverages software isolation to provide the
+%%same guarantees as VMs without incurring this overhead. Furthermore, ZCSI allows NFs to be written in high-level, safe
+%%languages, enhancing developer productivity and allowing faster development. ZCSI achieves this while improving
+%%performance when compared to today's deployments.}
+
+%%\cvlistitem {\textbf{NetBricks}: The use of ZCSI requires that NFs be rewritten. Writing an NF today requires that NF
+%%writers spend a great deal of time implementing and optimizing many basic building blocks (e.g., algorithms that split
+%%packets across cores, cache-aware data structures to reduce cross-core contention, etc.). However these building blocks
+%%are not easily generalized, the optimizations within these blocks is dependent on the algorithm being implemented, and
+%%design choices for other building blocks. NetBricks is a new framework for NFV where NFs are specified using a data flow
+%%graph whose nodes are drawn from a fixed set provided by the framework. This enables NetBricks to perform automatic
+%%reasoning and optimization, freeing the NF developer from these concerns.}
+
+%\cvlistitem {\textbf{BESS}: The Berkeley Extensible Software Switch is a virtual switch that has been specifically
+%optimized for NFV deployments. It is written to allow easy extensibility (allowing custom modules to be run), and offers
+%significant performance improvements over existing solutions like OpenVSwitch.}
+
+%\cvlistitem {\textbf{E2}: The move to NFV makes it essential that we build and provide tools for managing how NFs are
+%run and scaled in a cluster. E2 is a system that manages this, it builds on top of BESS (which is used to detect cases
+%where an individual NF is overloaded, and scale the NF as appropriate). E2 also provides support for NF fault tolerance
+%(through the use of FTMB), and allows operators to enforce QoS requirements, etc.}
+
+%\cvlistitem {\textbf{Model Checking for Networks}: Networks include middleboxes and other stateful elements whose
+    %behavior is dictated by previously encountered packets. We developed a tool to verify isolation invariants (can
+    %packets with certain characteristics be delivered to certain end hosts, and can data originating at a particular
+    %host end up somewhere). We also developed theoretical foundations showing that if one uses middlebox models with
+    %certain simple limitations and runs checks in loop free network then verification is guaranteed to terminate.}
+
+%\cvlistitem {\textbf{Data-Aware Cluster Scheduling for Sampling Jobs}: An increasing portion of cluster computing jobs
+%use sampled data, either to reduce computational time using approximate querying or when computing stochastic machine
+%learning functions. In this work, we looked at how cluster schedulers could use sampling information to significantly
+%improve the performance of cluster computing jobs.}
+
+%\cvlistitem {\textbf{Network Consistency Models}: Networks increasingly enforce policy, which ultimately requires that
+%several of the middleboxes/routers in a network have a consistent view of the network. However, the CAP theorem says
+%that this must necessarily come at the cost of giving up availability in the presence of partitions. In this work we
+%analyzed the effects of this trade-off.}
+
+%\cvlistitem {\textbf{Data Driven Connectivity}: Minimizing the network disruption due to link or router/switch failures
+    %continues to be an important concern.
+    %We developed an online algorithm that provides perfect forwarding
+%resilience \textit{i.e.,} guarantees that in an uncongested, connected network no set of link failures results in a packet drop. We
+%have also had subsequent work on theory that shows the limits of resilience that can be achieved using just static
+%routing tables with no updates.}
+
+%\cvlistitem {\textbf{SDNv2}: The rise of NFV and other similar technologies has meant that general purpose computers are
+%increasingly available at the network edge. We designed a new internet architecture that allowed ISPs to leverage these
+%computers to provide increased flexibility to the customers.}
+
+%\cvlistitem {\textbf{SMIRC}: We asked the question, can secure multiparty computation (SMPC) can be used to compute BGP
+%routing information. The use of SMPC would allows BGP computation to be centralized without requiring ASes to reveal
+%private policy information, speeding up BGP convergence without requiring ASes to change their trust model.}
+
+%\cvlistitem {\textbf{Recursive SDN}: We looked at how one could scale SDN controllers so they can be used to control ISP
+    %networks which tend to both be numerically larger, and geographically wide-spread. Our solution is to use hierarchy
+    %and recursive algorithms.}
+
+
+    %\cvlistitem {\textbf{BlinkDB}: We built a fast, approximate database on top of Spark. BlinkDB used sampling and
+    %innovative statistical techniques to provide approximate answers and quality measurements for arbitrary SQL query.
+%BlinkDB has since been deployed at companies like Facebook, is commercially supported by other companies.}
+
+%\cvlistitem {\textbf{Symmetry Breaking for Constraint Programming}: We looked at methods by which one could speed up
+%solving constraint satisfaction problems. These problems are widely used (for instance to schedule UPS delivery trucks
+%and NFL games) and are susceptible to an exponential growth in time, particularly when many equivalent (symmetric)
+%solutions exist. }
 
 \section{Teaching Experience}
 \cventry{\hspace{2em}\ \ Fall '13\newline Fall '12}{TA for EE122 (Undergraduate Networking)}{UC Berkeley}{Berkeley, CA}{}{
@@ -154,26 +193,9 @@ time accuracy and performance.
 \item Developed memory management tools for the PlayStation 3.
 \end{itemize}}
 \cventry{Summer '06}{Software Engineering Intern}{Bloomberg LP}{New York, NY}{}{\begin{itemize}
-\item Developed network debugging tools for discovering the cause for latency spikes in data transfer from financial markets.
+\item Developed network debugging tools for inferring the cause for latency spikes in data transfer from financial markets.
 \end{itemize}}
 
-\section{Publications}
-\nociteconference{*}
-\bibliographystyleconference{plainyr-rev}
-\bibliographyconference{conference}                   % 'publications' is the name of a BibTeX file
-
-\nociteworkshop{*}
-\bibliographystyleworkshop{plainyr-rev}
-\bibliographyworkshop{workshop}                   % 'publications' is the name of a BibTeX file
-
-
-\nocitedemos{*}
-\bibliographystyledemos{plainyr-rev}
-\bibliographydemos{demos}                   % 'publications' is the name of a BibTeX file
-
-\nocitetrs{*}
-\bibliographystyletrs{plainyr-rev}
-\bibliographytrs{tr}                   % 'publications' is the name of a BibTeX file
 \section{References}
 Available on request
 \end{document}
