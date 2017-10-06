@@ -7,6 +7,29 @@
 %\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvstyle{classic}
 \moderncvcolor{black}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+
+\newcommand{\cvdoublecolumn}[2]{
+    \begin{minipage}[t]{0.47\textwidth}#1\end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{0.47\textwidth}#2\end{minipage}%
+}
+
+
+% usage: \cvreference{name}{address line 1}{address line 2}{address line 3}{address line 4}{e-mail address}{phone number}
+% Everything but the name is optional
+% If \addresssymbol, \emailsymbol or \phonesymbol are specified, they will be used.
+% (Per default, \addresssymbol isn't specified, the other two are specified.)
+% If you don't like the symbols, remove them from the following code, including the tilde ~ (space).
+
+\newcommand{\cvreference}[7]{%
+    \textbf{#1}\newline% Name
+    \ifthenelse{\equal{#2}{}}{}{#2\newline}%
+    \ifthenelse{\equal{#3}{}}{}{#3\newline}%
+    \ifthenelse{\equal{#4}{}}{}{#4\newline}%
+    \ifthenelse{\equal{#5}{}}{}{#5\newline}%
+    \ifthenelse{\equal{#6}{}}{}{\texttt{#6}\newline}%
+    \ifthenelse{\equal{#7}{}}{}{#7}}
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 \renewcommand*{\subsectionfont}{\large\mdseries\upshape}
 \renewcommand*{\subsectionstyle}[1]{\subsectionfont\textbf{#1}}
@@ -28,9 +51,9 @@
 \phone[mobile]{+1~(401)~323~1524}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 %\phone[fixed]{+2~(345)~678~901}
 %\phone[fax]{+3~(456)~789~012}
-\email{apanda@cs.berkeley.edu}                               % optional, remove / comment the line if not wanted
+\email{apanda@cs.nyu.edu}                               % optional, remove / comment the line if not wanted
 \renewcommand*\httplink[2][]{{\urlstyle{sf}\expandafter\href#2}}
-\homepage{{https://www.cs.berkeley.edu/~apanda/}{www.cs.berkeley.edu/{\textasciitilde}apanda}}                         % optional, remove / comment the line if not wanted
+\homepage{{https://cs.nyu.edu/~apanda/}{cs.nyu.edu/{\textasciitilde}apanda}}                         % optional, remove / comment the line if not wanted
 %\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
 %\social[twitter]{apanda}                             % optional, remove / comment the line if not wanted
 %\social[github]{apanda}                              % optional, remove / comment the line if not wanted
@@ -48,6 +71,9 @@
 % bibliography with mutiple entries
 \usepackage{multibib}
 \newcites{conference,journals,workshop,demos,trs}{{Conferences},{Journals},{Workshops},{Demos},{Technical Reports}}
+
+
+
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
@@ -58,8 +84,47 @@
 \section{Research Interests}
 Computer Systems, Distributed Systems, Networking
 
+\section{Professional Employment}
+\cventry{Aug 2018--}{Assistant Professor}{Courant Institute, New York University}{New York, NY}{}{}
+\cventry{Apr 2017--Aug 2018}{Software Developer}{Nefeli Networks}{Berkeley, CA}{}{\begin{itemize}
+    \item Working at a startup focused on network function orchestration and development. Nefeli builds on NetBricks,
+        Bess, E2 and other research I have been involved in.
+\end{itemize}}
+\cventry{2011--2017}{Research Assistant}{UC Berkeley}{Berkeley, CA}{}{}
+\cventry{2008--2011}{Software Developer}{Microsoft}{Redmond, WA}{}{\begin{itemize}
+\item Worked on the kernel for Midori, an experimental operating system based on Singularity.
+\item Designed, implemented and maintained Midori's performance counting and event logging infrastructure.
+\item Designed and implemented timer infrastructure for Midori. Midori relied purely on core-local time and allowed applications to specify a tradeoff between
+time accuracy and performance.
+\item Ported Midori from x86-64 to NVidia's Tegra2 multicore ARM processor.
+\end{itemize}}%
+\cventry{Summer '07}{Software Engineering Intern}{Electronic Arts}{Redwood City, CA}{}{\begin{itemize}
+\item Developed memory management tools for the PlayStation 3.
+\end{itemize}}
+\cventry{Summer '06}{Software Engineering Intern}{Bloomberg LP}{New York, NY}{}{\begin{itemize}
+\item Developed network debugging tools for inferring the cause for latency spikes in data transfer from financial markets.
+\end{itemize}}
+
+\section{Teaching Experience}
+\cventry{\hspace{2em}\ \ Fall '13\newline Fall '12}{TA for EE122 (Undergraduate Networking)}{UC Berkeley}{Berkeley, CA}{}{
+\begin{itemize}
+\item Taught about 20 students in a weekly discussion section.
+\item Designed problem sets and projects, ran a project involving plug computers
+\end{itemize}}
+\cventry{2006--2008}{Undergraduate TA}{CS Department, Brown University}{Providence, RI}{}{
+\begin{itemize}
+\item TAed CS51 (Models of Computation), CS138 (Distributed Computing), CS166 (Security), CS167 (Operating Systems) and CS169 (Operating Systems Lab).
+\item Helped with designing new content and projects for distributed systems and security.
+\item Helped design and grade problem sets and projects.
+\end{itemize}
+}
+\cventry{Fall '05}{Reader}{Math Department, Brown University}{Providence, RI}{}{
+    \begin{itemize}
+    \item Graded problem sets and exams for Honors Linear Algebra.
+    \end{itemize}
+}
 \section{Education}
-\cventry{2011--present}{PhD candidate}{University of California}{Berkeley, CA}{}{Advisor: Scott Shenker}  % arguments 3 to 6 can be left empty
+\cventry{2011--2017}{PhD candidate}{University of California}{Berkeley, CA}{}{Advisor: Scott Shenker}  % arguments 3 to 6 can be left empty
 \cventry{2004--2008}{Sc.B. Math--Computer Science}{Brown University}{Providence, RI}{}{Honors in Math--Computer Science\\
 Advisor: Meinolf Sellmann}
 
@@ -89,6 +154,8 @@ Advisor: Meinolf Sellmann}
 \nocitetrs{*}
 \bibliographystyletrs{plainyr-rev}
 \bibliographytrs{tr}                   % 'publications' is the name of a BibTeX file
+
+    %\cventry{Industry Liason CSGSA}{}{}{}
 %\section{Research}
 %%\cvlistitem{\textbf{NetBricks}}: 
 %%\cvlistitem {\textbf{ZCSI}: Network operators are increasingly moving from hardware middleboxes to software network
@@ -163,41 +230,78 @@ Advisor: Meinolf Sellmann}
 %and NFL games) and are susceptible to an exponential growth in time, particularly when many equivalent (symmetric)
 %solutions exist. }
 
-\section{Teaching Experience}
-\cventry{\hspace{2em}\ \ Fall '13\newline Fall '12}{TA for EE122 (Undergraduate Networking)}{UC Berkeley}{Berkeley, CA}{}{
-\begin{itemize}
-\item Taught about 20 students in a weekly discussion section.
-\item Designed problem sets and projects, ran a project involving plug computers
-\end{itemize}}
-\cventry{2006--2008}{Undergraduate TA}{CS Department, Brown University}{Providence, RI}{}{
-\begin{itemize}
-\item TAed CS51 (Models of Computation), CS138 (Distributed Computing), CS166 (Security), CS167 (Operating Systems) and CS169 (Operating Systems Lab).
-\item Helped with designing new content and projects for distributed systems and security.
-\item Helped design and grade problem sets and projects.
-\end{itemize}
-}
-\cventry{Fall '05}{Reader}{Math Department, Brown University}{Providence, RI}{}{
+\section{Talks}
+    \textbf{NetBricks: Taking the V out of NFV}
     \begin{itemize}
-    \item Graded problem sets and exams for Honors Linear Algebra.
+        \item OSDI. November 2016
+        \item Intel Research. October 2016
+        \item Google Platforms and Networking. October 2016
     \end{itemize}
-}
-\section{Industry Experience}
-\cventry{2008--2011}{Software Developer}{Microsoft}{Redmond, WA}{}{\begin{itemize}
-\item Worked on the kernel for Midori, an experimental operating system based on Singularity.
-\item Designed, implemented and maintained Midori's performance counting and event logging infrastructure.
-\item Designed and implemented timer infrastructure for Midori. Midori relied purely on core-local time and allowed applications to specify a tradeoff between
-time accuracy and performance.
-\item Ported Midori from x86-64 to NVidia's Tegra2 multicore ARM processor.
-\end{itemize}}%
-\cventry{Summer '07}{Software Engineering Intern}{Electronic Arts}{Redwood City, CA}{}{\begin{itemize}
-\item Developed memory management tools for the PlayStation 3.
-\end{itemize}}
-\cventry{Summer '06}{Software Engineering Intern}{Bloomberg LP}{New York, NY}{}{\begin{itemize}
-\item Developed network debugging tools for inferring the cause for latency spikes in data transfer from financial markets.
-\end{itemize}}
+    
+    \textbf{VMN: Verifying Networks with Mutable Datapaths}
+    \begin{itemize}
+        \item Invited speaker at NetPL. August, 2016.
+        \item Summit on Advances in Programming Languages (SNAPL). May 2015.
+        \item Dagstuhl - Formal Foundations for Networking. February 2015.
+    \end{itemize}
 
+    \textbf{Ensuring Connectivity via Dataplane Mechanisms}
+    \begin{itemize}
+        \item NSDI. April 2013.
+    \end{itemize}
+\section{Service}
+    \begin{itemize}
+        \item \textbf{Reviewing} Reviewer for Journal of Applied Logic.
+    External Reviewer for ESOP 2017, POPL 2017, SOSR 2016, PLDI 2015, ICDE 2013.
+    Helped review papers for SIGCOMM 2016, HotNets 2015, SIGCOMM 2015, NSDI 2014, EuroSys 2013, SoCC 2012.
+    \item Industry Liaison for the Berkeley Computer Science Graduate Student Association.
+    \end{itemize}
 \section{References}
-Available on request
+%Available on request
+\cvdoublecolumn{\cvreference{Prof. Scott Shenker}
+{Electrical Engineering and Computer Science}
+{University of California, Berkeley}
+{}
+{}
+{shenker@icsi.berkeley.edu}
+{}
+}
+{\cvreference{Prof. Sylvia Ratnasamy}
+{Electrical Engineering and Computer Science}
+{University of California, Berkeley}
+{}
+{}
+{sylvia@eecs.berkeley.edu}
+{}
+}
+\cvdoublecolumn{\cvreference{Prof. Ion Stoica}
+{Electrical Engineering and Computer Science}
+{University of California, Berkeley}
+{}
+{}
+{istoica@cs.berkeley.edu}
+{}
+}
+{\cvreference{Prof. Mooly Sagiv}
+{School of Computer Science}
+{Tel Aviv University}
+{}
+{}
+{msagiv@acm.org}
+{}
+}
+
+{\cvreference{Prof. Katerina Argyraki}
+{School of Computer and Communication Sciences}
+{Ecole Polytechnique Federale de Lausanne}
+{}
+{}
+{katerina.argyraki@epfl.ch}
+{}
+
+
+
+
 \end{document}
 
 
