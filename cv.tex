@@ -47,7 +47,7 @@
 % personal data
 \name{Aurojit}{Panda}
 \title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
-\address{1176 University Ave, Apt 107}{Berkeley, CA 94702}   % optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\address{14 Washington Pl, Apt 7M}{New York, NY 10003}   % optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
 \phone[mobile]{+1~(401)~323~1524}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 %\phone[fixed]{+2~(345)~678~901}
 %\phone[fax]{+3~(456)~789~012}
@@ -83,23 +83,34 @@
 \section{Research Interests}
 Computer Systems, Distributed Systems, Networking
 
+\section{Education}
+\cventry{2011--2017}{Ph.D. Computer Science}{University of California}{Berkeley, CA}{}{Advisor: Scott Shenker}  % arguments 3 to 6 can be left empty
+\cventry{2004--2008}{Sc.B. Math--Computer Science}{Brown University}{Providence, RI}{}{Honors in Math--Computer Science\\
+Advisor: Meinolf Sellmann}
+
 \section{Professional Employment}
 \cventry{Aug 2018--}{Assistant Professor}{Courant Institute, New York University}{New York, NY}{}{}
-\cventry{Apr 2017--Aug 2018}{Software Developer}{Nefeli Networks}{Berkeley, CA}{}{Working on a NFV platform based on E2, NetBricks and Bess.}
+\cventry{2017--2018}{Software Developer}{Nefeli Networks}{Berkeley, CA}{}{%
+%Working on a NFV platform based on E2, NetBricks and Bess.
+}
 \cventry{2011--2017}{Research Assistant}{UC Berkeley}{Berkeley, CA}{}{}
-\cventry{2008--2011}{Software Developer}{Microsoft}{Redmond, WA}{}{\begin{itemize}
-\item Worked on the kernel for Midori, an experimental operating system based on Singularity.
-\item Designed, implemented and maintained Midori's performance counting and event logging infrastructure.
-\item Designed and implemented timer infrastructure for Midori. Midori relied purely on core-local time and allowed applications to specify a tradeoff between
-time accuracy and performance.
-\item Ported Midori from x86-64 to NVidia's Tegra2 multicore ARM processor.
-\end{itemize}}%
-\cventry{Summer '07}{Software Engineering Intern}{Electronic Arts}{Redwood City, CA}{}{\begin{itemize}
-\item Developed memory management tools for the PlayStation 3.
-\end{itemize}}
-\cventry{Summer '06}{Software Engineering Intern}{Bloomberg LP}{New York, NY}{}{\begin{itemize}
-\item Developed network debugging tools for inferring the cause for latency spikes in data transfer from financial markets.
-\end{itemize}}
+\cventry{2008--2011}{Software Developer}{Microsoft}{Redmond, WA}{}{}%\begin{itemize}
+%\item Worked on the kernel for Midori, an experimental operating system based on Singularity.
+%\item Designed, implemented and maintained Midori's performance counting and event logging infrastructure.
+%\item Designed and implemented timer infrastructure for Midori. Midori relied purely on core-local time and allowed applications to specify a tradeoff between
+%time accuracy and performance.
+%\item Ported Midori from x86-64 to NVidia's Tegra2 multicore ARM processor.
+%\end{itemize}}%
+\cventry{Summer '07}{Software Engineering Intern}{Electronic Arts}{Redwood City, CA}{}{%
+%\begin{itemize}
+%\item Developed memory management tools for the PlayStation 3.
+%\end{itemize}
+}
+\cventry{Summer '06}{Software Engineering Intern}{Bloomberg LP}{New York, NY}{}{%
+%\begin{itemize}
+%\item Developed network debugging tools for inferring the cause for latency spikes in data transfer from financial markets.
+%\end{itemize}}
+}
 
 \section{Teaching Experience}
 \cventry{\hspace{2em}\ \ Fall '13\newline Fall '12}{TA for EE122 (Undergraduate Networking)}{UC Berkeley}{Berkeley, CA}{}{
@@ -119,15 +130,13 @@ time accuracy and performance.
     \item Graded problem sets and exams for Honors Linear Algebra.
     \end{itemize}
 }
-\section{Education}
-\cventry{2011--2017}{Ph.D. Computer Science}{University of California}{Berkeley, CA}{}{Advisor: Scott Shenker}  % arguments 3 to 6 can be left empty
-\cventry{2004--2008}{Sc.B. Math--Computer Science}{Brown University}{Providence, RI}{}{Honors in Math--Computer Science\\
-Advisor: Meinolf Sellmann}
 
 \section{Awards}
+\cvlistitem{Demetri Angelakos Memorial Achievement Award, Berkeley EECS 2016-17}
 \cvlistitem{Best Student Paper, SIGCOMM 2015}
 \cvlistitem{Best Paper, EuroSys 2013}
 \cvlistitem{Qualcomm Innovation Fellowship 2012}
+
 
 \section{Publications}
 \nociteconference{*}
@@ -151,7 +160,6 @@ Advisor: Meinolf Sellmann}
 \bibliographystyletrs{plainyr-rev}
 \bibliographytrs{tr}                   % 'publications' is the name of a BibTeX file
 
-    %\cventry{Industry Liason CSGSA}{}{}{}
 %\section{Research}
 %%\cvlistitem{\textbf{NetBricks}}: 
 %%\cvlistitem {\textbf{ZCSI}: Network operators are increasingly moving from hardware middleboxes to software network
@@ -251,9 +259,25 @@ Advisor: Meinolf Sellmann}
     \end{itemize}
 \section{Service}
     \begin{itemize}
-        \item Reviewer for Journal of Applied Logic, Transactions on Networking, SOSR 2018.
-    External Reviewer for ESOP 2017, POPL 2017, SOSR 2016, PLDI 2015, ICDE 2013.
-    \item Industry Liaison for the Berkeley Computer Science Graduate Student Association.
+        \item Reviewer for:
+            \begin{itemize}
+                \item Journal of Applied Logic (2016)
+                \item SIGCOMM CCR (2017, 2018)
+                \item ACM/IEEE Transactions on Networking (2017)
+                \item SOSR (2018)
+                \item MobiSys (ERC 2018)
+                \item ANCS (2018)
+                \item EuroSys Doctoral Workshop (2018)
+                \item KBNets (2018)
+                \item SecSoN (2018)
+                \item ACM/IEEE Transactions on Networking (2018)
+                \item CoNext (2018)
+                \item HotNets (2018)
+                \item NSDI (2019)
+                \item EuroSys (2019)
+            \end{itemize}
+        \item External Reviewer for ESOP 2017, POPL 2017, SOSR 2016, PLDI 2015, ICDE 2013.
+        \item Industry Liaison for the Berkeley Computer Science Graduate Student Association.
     \end{itemize}
 \section{References}
 %Available on request
