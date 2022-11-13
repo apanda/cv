@@ -62,11 +62,11 @@
 %\quote{Some quote}                                 % optional, remove / comment the line if not wanted
 
 % to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
-%\makeatletter
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+\makeatletter
+\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
 \makeatother
-%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
-\renewcommand*{\bibliographyitemlabel}{$\bullet$}% CONSIDER REPLACING THE ABOVE BY THIS
+\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+%\renewcommand*{\bibliographyitemlabel}{$\bullet$}% CONSIDER REPLACING THE ABOVE BY THIS
 
 % bibliography with mutiple entries
 \usepackage{multibib}
@@ -134,18 +134,35 @@ Advisor: Meinolf Sellmann}
 \cvlistitem{Best Student Paper, SIGCOMM 2015}
 \cvlistitem{Best Paper, EuroSys 2013}
 \cvlistitem{Qualcomm Innovation Fellowship 2012}
+\newpage
 
-\section{Grants}
-%\cvlistitem{Microsoft Azure Research Award 2018 (\$5000 cloud credit)}
-\cvlistitem{NSF CAREER: Assertions for Distributed Applications (2022-2027) (\$
-700\,002)}
-\cvlistitem{Google Research Award 2021 (\$ 80\,000 unrestricted gift)}
-\cvlistitem{NSF EAGER: Towards an Extensible Internet (2020-2021) (\$ 30\,067)}
-\cvlistitem{Microsoft Research Gift 2020 (\$ 80\,000 unrestricted gift, joint with Jinyang Li)}
-\cvlistitem{NSF PPoSS: Planning: Making Smart Use of SmartNICs (2020-2021) (\$ 80\,000)}
-\cvlistitem{Microsoft Research Gift 2019 (\$ 80\,000 unrestricted gift, joint with Jinyang Li)}
-\cvlistitem{Nefeli Networks Gift 2019 (\$ 50\,000 unrestricted grant)}
-\cvlistitem{VMWare Early Career Faculty Award 2018 (\$ 35\,000 unrestricted grant)}
+\section{Top-Five Cited Papers}
+\cvlistitem{BlinkDB: queries with bounded errors and bounded response times on
+very large data. Sameer Agarwal, Barzan Mozafari, Aurojit Panda, Henry Milner,
+Samuel Madden, Ion Stoica. EuroSys 2013. (829 citations)}
+\cvlistitem{E2: A framework for NFV application. Shoumik Palkar, Chang Lan,
+Sangjin Han, Keon Jang, Aurojit Panda, Sylvia Ratnasamy, Luigi Rizzo, Scott
+Shenker. SOSP 2015 (351 citations)}
+\cvlistitem{NetBricks: Taking the V out of NFV. Aurojit Panda, Sangjin Han, Keon
+Jang, Melvin Walls, Sylvia Ratnasamy, Scott Shenker. OSDI 2016 (289 citations)}
+\cvlistitem{SoftNIC: A software NIC to augment hardware. Sangjin Han, Keon Jang,
+Aurojit Panda, Shoumik Palkar, Dongsu Han, Sylvia Ratnsamy. UCB EECS Tech Report
+2015 (204 citations)}
+\cvlistitem{Network support for resource disaggregation in next-generation
+datacenters. Sangjin Han, Nobert Egi, Aurojit Panda, Guangyu Shi, Sylvia
+Ratnasamy, Scott Shenker. HotNets 2013 (194 citations)}
+
+%\section{Grants}
+%%\cvlistitem{Microsoft Azure Research Award 2018 (\$5000 cloud credit)}
+%\cvlistitem{NSF CAREER: Assertions for Distributed Applications (2022-2027) (\$
+%700\,002)}
+%\cvlistitem{Google Research Award 2021 (\$ 80\,000 unrestricted gift)}
+%\cvlistitem{NSF EAGER: Towards an Extensible Internet (2020-2021) (\$ 30\,067)}
+%\cvlistitem{Microsoft Research Gift 2020 (\$ 80\,000 unrestricted gift, joint with Jinyang Li)}
+%\cvlistitem{NSF PPoSS: Planning: Making Smart Use of SmartNICs (2020-2021) (\$ 80\,000)}
+%\cvlistitem{Microsoft Research Gift 2019 (\$ 80\,000 unrestricted gift, joint with Jinyang Li)}
+%\cvlistitem{Nefeli Networks Gift 2019 (\$ 50\,000 unrestricted grant)}
+%\cvlistitem{VMWare Early Career Faculty Award 2018 (\$ 35\,000 unrestricted grant)}
 
 \section{Students Advised}
 \cvlistitem{John Westhoff. PhD student (Fall 2018 -- Fall 2021)}
@@ -154,8 +171,6 @@ Advisor: Meinolf Sellmann}
 \cvlistitem{Anqi Zhang. PhD student co-advised with Jinyang Li (Fall 2019 -- present)}
 \cvlistitem{Vinayak Agarwal. Masters student (Summer 2021 -- present)}
 \cvlistitem{Vivian Fang. Undergraduate student (Fall 2017 -- Fall 2018)}
-\cvlistitem{Christopher Branner-Augmon. Undergraduate student (Fall 2019 -- Fall
-2020)}
 
 
 
