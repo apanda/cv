@@ -1,4 +1,6 @@
 \documentclass[11pt,letterpaper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\usepackage{url}
+\urlstyle{sf}
 \usepackage{xspace}
 \newcommand\eat[1]{}
 %\newcommand{\ie}{{\it i.e.,}\xspace}
@@ -50,8 +52,8 @@
 \address{60 Fifth Ave, Room 405}{New York, NY 10011}   % optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
 \phone[mobile]{+1~(401)~323~1524}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 \email{apanda@cs.nyu.edu}                               % optional, remove / comment the line if not wanted
-\renewcommand*\httplink[2][]{{\urlstyle{sf}\expandafter\href#2}}
-\homepage{{https://cs.nyu.edu/{\textasciitilde}apanda}}                         % optional, remove / comment the line if not wanted
+% \renewcommand*\httplink[2][]{{\urlstyle{sf}\expandafter\href#2}}
+\homepage{cs.nyu.edu/~apanda}                         % optional, remove / comment the line if not wanted
 %\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
 %\social[twitter]{apanda}                             % optional, remove / comment the line if not wanted
 %\social[github]{apanda}                              % optional, remove / comment the line if not wanted
@@ -152,14 +154,18 @@ Advisor: Meinolf Sellmann}
 \cvlistitem{VMWare Early Career Faculty Award 2018. Sole PI (\$ 35\,000)}
 
 \section{Students Advised}
+\cvlistitem{Wen Zhang. PhD student unoffically co-advised with Scott Shenker (UC Berkeley, Fall 2018 -- present)}
 \cvlistitem{John Westhoff. PhD student (Fall 2018 -- Fall 2021)}
 \cvlistitem{Changgeng Zhao. PhD student (Fall 2018 -- Fall 2021)}
 \cvlistitem{Tao Wang. PhD student co-advised with Anirudh Sivaraman (Fall 2019 -- present)}
+\cvlistitem{Ioanna Tzialla. PhD student unofficially co-advised with Michael Walfish (Fall 2020 -- Fall 2022)}
 \cvlistitem{Jinkun Lin. PhD student co-advised with Jinyang Li (Fall 2019 -- present)}
 \cvlistitem{Anqi Zhang. PhD student co-advised with Jinyang Li (Fall 2019 -- present)}
+\cvlistitem{Hugo Sadok. PhD student unofficially co-advised with Justine Sherry (CMU, Fall 2020 -- present)}
 \cvlistitem{Ding Ding. PhD student co-advised with Jinyang Li (Fall 2021 --
 present)}
 \cvlistitem{Zhanghan Wang. PhD student (Fall 2022 -- present)}
+\cvlistitem{Emily Marx. PhD student unofficially co-advised with Scott Shenker (UC Berkeley, Fall 2022 -- present)}
 \cvlistitem{Hexu Zhao. PhD student co-advised with Jinyang Li (Fall 2023 -- present)}
 \cvlistitem{David Pissarra. PhD student co-advised with Jinyang Li (Fall 2024 --
 present)}
@@ -196,9 +202,14 @@ student (Fall 2024 -- present)}
 \cvlistitem{Akshay Narayan (MIT)}
 
 
-
+\section{Courses}
+\cvlistitem{Graduate Distributed Systems -- NYU. Fall 2018, Fall 2020, Fall 2021, Fall 2022, Spring 2024. \url{https://cs.nyu.edu/~apanda/classes/sp24/}}
+\cvlistitem{Undergraduate Operating Systems -- NYU. Spring 2020, Fall 2023. \url{https://cs.nyu.edu/~apanda/classes/fa23/}}
+\cvlistitem{Seminar: Big Data and Machine Learning -- NYU. Spring 2021, Spring 2022, Spring 2023. \url{https://cs.nyu.edu/~apanda/classes/sp23/}}
+\cvlistitem{Undergraduate Computer Networks -- NYU. Fall 2019. \url{https://cs.nyu.edu/courses/fall19/CSCI-UA.0480-008/}}
 
 \section{Publications}
+\textit{Selected papers can be found at \url{https://cs.nyu.edu/~apanda/selected-papers.html}.}
 \nociteconference{*}
 \bibliographystyleconference{plainyr-rev}
 \bibliographyconference{conference}                   % 'publications' is the name of a BibTeX file
@@ -253,6 +264,7 @@ student (Fall 2024 -- present)}
         \item Dagstuhl - Formal Foundations for Networking. February 2015.
     \end{itemize}
 \section{Service}
+\subsection{To the community}
 \begin{itemize}
     \item Advisory board for the National Deep Inference Fabric. 2024--present
     \item Program Committee Chair: HotOS 2025.
@@ -286,5 +298,11 @@ student (Fall 2024 -- present)}
             \item ACM/IEEE Transactions on Networking (2018)
             \item EuroP4 (2019, 2020)
         \end{itemize}
+\end{itemize}
+\subsection{To the department}
+\begin{itemize}
+  \item PhD admissions committee. 2018 -- present.
+  \item MS admissions committee. 2022 -- present.
+  \item Chair search committee. Spring 2024.
 \end{itemize}
 \end{document}
