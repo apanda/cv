@@ -236,6 +236,13 @@ FUNCTION {emphasize}
   if$
 }
 
+ FUNCTION {embolden}
+ { duplicate$ empty$
+     { pop$ "" }
+     { "{\bfseries " swap$ * "}" * }
+   if$
+ }
+
 INTEGERS { nameptr namesleft numnames }
 
 FUNCTION {format.names}
@@ -747,7 +754,7 @@ FUNCTION {inproceedings}
     }
   if$
   new.block
-  note output
+  note embolden output
   fin.entry
 }
 
